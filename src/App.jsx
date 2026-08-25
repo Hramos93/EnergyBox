@@ -15,7 +15,16 @@ function App() {
             <li><a href="#ubicacion">Ubicación</a></li>
             <li><a href="#faq">FAQ</a></li>
           </ul>
-          <a href="#contacto" className="btn btn-primary nav-cta">Únete Ahora</a>
+          <a
+            href="https://wa.me/584167130325?text=Hola,%20me%20gustar%C3%ADa%20reservar%20!"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn btn-primary btn-large"
+            style={{ display: 'inline-block' }}
+          >
+            <span style={{ fontSize: '1.2rem', marginRight: '8px' }}>💬</span> Escríbenos al WhatsApp
+          </a>
+
         </div>
       </nav>
 
