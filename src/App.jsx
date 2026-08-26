@@ -22,7 +22,7 @@ function App() {
             className="btn btn-primary btn-large"
             style={{ display: 'inline-block' }}
           >
-            <span style={{ fontSize: '1.0rem', marginRight: '8px' }}>💬</span> Escríbenos al WhatsApp
+            <span style={{ fontSize: '0.8em', marginRight: '6px' }}>💬</span> Escríbenos al WhatsApp
           </a>
 
         </div>
@@ -44,7 +44,7 @@ function App() {
               className="btn btn-primary btn-large"
               style={{ display: 'inline-block' }}
             >
-              <span style={{ fontSize: '1.0rem', marginRight: '8px' }}>💬</span> Escríbenos al WhatsApp
+              <span style={{ fontSize: '0.8em', marginRight: '6px' }}>💬</span> Escríbenos al WhatsApp
             </a>
           </div>
         </div>
@@ -199,7 +199,7 @@ function App() {
               Contáctanos directamente por WhatsApp para agendar tu primera clase con nuestros coaches.
             </p>
             <a
-              href="https://wa.me/584167130325?text=Hola,%20me%20gustar%C3%ADa%20reservar%20!"
+              href="https://wa.me/584167130325?text=Hola,%20quisiera%20m%C3%A1s%20informaci%C3%B3n%20por%20favor!"
               target="_blank"
               rel="noopener noreferrer"
               className="btn btn-primary btn-large"
