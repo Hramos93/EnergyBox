@@ -22,7 +22,7 @@ function App() {
             className="btn btn-primary btn-large"
             style={{ display: 'inline-block' }}
           >
-            <span style={{ fontSize: '1.2rem', marginRight: '8px' }}>💬</span> Escríbenos al WhatsApp
+            <span style={{ fontSize: '1.0rem', marginRight: '8px' }}>💬</span> Escríbenos al WhatsApp
           </a>
 
         </div>
@@ -37,7 +37,15 @@ function App() {
             Entrenamiento funcional de alta intensidad diseñado para transformar tu cuerpo y mente. Únete a la comunidad de Energy Box C.A.
           </p>
           <div className="hero-buttons">
-            <a href="#contacto" className="btn btn-primary btn-large">Contactanos</a>
+            <a
+              href="https://wa.me/584167130325?text=Hola,%20me%20gustar%C3%ADa%20reservar%20!"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn btn-primary btn-large"
+              style={{ display: 'inline-block' }}
+            >
+              <span style={{ fontSize: '1.0rem', marginRight: '8px' }}>💬</span> Escríbenos al WhatsApp
+            </a>
           </div>
         </div>
       </header>
