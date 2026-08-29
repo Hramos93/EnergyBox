@@ -1,69 +1,110 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="Energy Box C.A. - Tu gimnasio de CrossFit. Supera tus límites con nuestras clases de WODs, Weightlifting, Gymnastics y Endurance. Reserva tu clase de prueba gratis hoy.">
-    
-    <!-- Open Graph / Redes Sociales y WhatsApp -->
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Energy Box C.A. | CrossFit & Fitness">
-    <meta property="og:description" content="Tu gimnasio de CrossFit. Supera tus límites con nuestras clases. Reserva tu clase de prueba gratis hoy.">
-    <!-- NOTA: Para que WhatsApp muestre la imagen al compartir el link, la URL de 'og:image' en producción DEBE ser absoluta (ej. https://tudominio.com/assets/favicon.jpg) -->
-    <meta property="og:image" content="/assets/favicon.jpg">
-    
-    <title>Energy Box C.A. | CrossFit & Fitness</title>
-    <link rel="icon" type="image/jpeg" href="/assets/favicon.jpg">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;700;900&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <!-- 1. Título y Meta Descripción SEO -->
+  <title>Energy Box C.A. | Gimnasio de CrossFit & Fitness en Caracas</title>
+  <meta 
+    name="description" 
+    content="Energy Box C.A. - Tu gimnasio de CrossFit y entrenamiento funcional. Supera tus límites con WODs, Weightlifting, Gymnastics y Endurance. ¡Prueba tu clase gratis!" 
+  />
+  <meta name="robots" content="index, follow" />
 
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VTH2KQSTYP"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
+  <!-- 2. Etiqueta Canónica Oficial -->
+  <link rel="canonical" href="https://energyboxvzla.com/" />
 
-        gtag('config', 'G-VTH2KQSTYP');
-    </script>
+  <!-- 3. Open Graph (Facebook, WhatsApp, LinkedIn) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://energyboxvzla.com/" />
+  <meta property="og:title" content="Energy Box C.A. | CrossFit & Fitness" />
+  <meta property="og:description" content="Tu gimnasio de CrossFit. Supera tus límites con nuestras clases. Reserva tu clase de prueba gratis hoy." />
+  <!-- URL ABSOLUTA obligatoria para previsualización en WhatsApp/Redes -->
+  <meta property="og:image" content="https://energyboxvzla.com/assets/favicon.jpg" />
+  <meta property="og:locale" content="es_VE" />
 
-    <!-- Schema Markup for FAQ -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [{
-        "@type": "Question",
-        "name": "¿Necesito tener experiencia previa para unirme?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "No, nuestras clases son adaptables a cualquier nivel. Nuestros coaches te guiarán paso a paso."
-        }
-      }, {
-        "@type": "Question",
-        "name": "¿Qué equipo necesito llevar?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Solo necesitas ropa cómoda, zapatos deportivos, hidratación y una toalla. El resto del equipo lo ponemos nosotros."
-        }
-      }, {
-        "@type": "Question",
-        "name": "¿Tengo una lesión antigua, puedo entrenar?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Siempre y cuando tengas aprobación médica. Por favor infórmale a nuestros coaches para que adapten los ejercicios (escalabilidad) y evites cualquier riesgo."
-        }
-      }]
-    }
-    </script>
+  <!-- 4. Twitter Cards -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content="https://energyboxvzla.com/" />
+  <meta name="twitter:title" content="Energy Box C.A. | CrossFit & Fitness" />
+  <meta name="twitter:description" content="Tu gimnasio de CrossFit. Supera tus límites con nuestras clases. Reserva tu clase de prueba gratis hoy." />
+  <meta name="twitter:image" content="https://energyboxvzla.com/assets/favicon.jpg" />
+
+  <!-- 5. Favicon y Fuentes -->
+  <link rel="icon" type="image/jpeg" href="/assets/favicon.jpg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;700;900&display=swap" rel="stylesheet" />
+
+  <!-- 6. Google Analytics (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-VTH2KQSTYP"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-VTH2KQSTYP');
+  </script>
+
+  <!-- 7. Datos Estructurados Schema.org: Negocio Local + FAQs -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "ExerciseGym",
+        "@id": "https://energyboxvzla.com/#gym",
+        "name": "Energy Box C.A.",
+        "url": "https://energyboxvzla.com/",
+        "logo": "https://energyboxvzla.com/assets/favicon.jpg",
+        "image": "https://energyboxvzla.com/assets/favicon.jpg",
+        "description": "Gimnasio especializado en CrossFit, Weightlifting, Gymnastics y entrenamiento funcional.",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Caracas",
+          "addressCountry": "VE"
+        },
+        "priceRange": "$$"
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://energyboxvzla.com/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "¿Necesito tener experiencia previa para unirme?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No, nuestras clases son adaptables a cualquier nivel. Nuestros coaches te guiarán paso a paso."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Qué equipo necesito llevar?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Solo necesitas ropa cómoda, zapatos deportivos, hidratación y una toalla. El resto del equipo lo ponemos nosotros."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Tengo una lesión antigua, puedo entrenar?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Siempre y cuando tengas aprobación médica. Por favor infórmale a nuestros coaches para que adapten los ejercicios (escalabilidad) y evites cualquier riesgo."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <!-- Assets del Build (Vite/React) -->
+  <script type="module" crossorigin src="/assets/index-CEOwUZAS.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-CigbBLLm.css" />
 </head>
-
 <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
+  <div id="root"></div>
 </body>
-
 </html>
