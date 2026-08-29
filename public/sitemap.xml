@@ -1,0 +1,59 @@
+<!-- 
+  ======================================================================
+  GUÍA RÁPIDA: ¿CUÁNDO Y CÓMO ACTUALIZAR ESTE SITEMAP?
+  ======================================================================
+  
+  1. ¿CUÁNDO MODIFICAR ESTE ARCHIVO?
+     • NUEVA PÁGINA / SERVICIO: Agrega un bloque <url> completo con su ruta canónica.
+     • CONTENIDO ACTUALIZADO: Si cambias precios, textos clave o diseño en una página, 
+       actualiza la fecha en <lastmod> al día del cambio (formato: AAAA-MM-DD).
+     • PÁGINA ELIMINADA / REDIRIGIDA: Borra su bloque <url> de inmediato. Nunca dejes 
+       enlaces rotos (404) ni redirecciones (301) aquí.
+     • CAMBIO DE ESTRUCTURA / DOMINIO: Asegura que todas las URLs mantengan HTTPS y la 
+       versión oficial canónica (con o sin barra final).
+
+  2. REGLAS OBLIGATORIAS:
+     • Solo incluir URLs con código HTTP 200 OK e indexables (sin etiqueta 'noindex').
+     • No inventar fechas futuras en <lastmod>; Googlebot ignora fechas inconsistentes.
+     • Tras cada actualización mayor, notifica el re-rastreo en Google Search Console.
+  ======================================================================
+-->
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+  Sitemap XML Optimizado
+  Dominio: https://energyboxvzla.com
+  Protocolo estándar: sitemaps.org v0.9
+  Buenas prácticas aplicadas:
+    1. Solo URLs canónicas con código 200 OK.
+    2. Formato de fecha ISO 8601 real (última modificación verificable).
+    3. URLs absolutas con protocolo HTTPS exacto.
+-->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- 1. Home / Raíz (Página principal de mayor autoridad) -->
+  <url>
+    <loc>https://energyboxvzla.com/</loc>
+    <lastmod>2026-08-29</lastmod>
+    <!-- Opcional: orientativo para otros motores secundarios -->
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- 2. Página de Planes / Servicios (Conversión transaccional) -->
+  <url>
+    <loc>https://energyboxvzla.com/planes</loc>
+    <lastmod>2026-08-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- 3. Página de Contacto / Ubicación -->
+  <url>
+    <loc>https://energyboxvzla.com/contacto</loc>
+    <lastmod>2026-08-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+</urlset>
