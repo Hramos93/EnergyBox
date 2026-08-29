@@ -1,0 +1,13 @@
+# Configuración global para todos los rastreadores
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /api/
+Disallow: /*?*order=
+
+# Bloqueo selectivo de bots masivos / scrapers
+User-agent: CCBot
+Disallow: /
+
+# Ubicación del Sitemap
+Sitemap: https://energyboxvzla.com/sitemap.xml
