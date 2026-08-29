@@ -22,7 +22,7 @@ function App() {
             className="btn btn-primary btn-large"
             style={{ display: 'inline-block' }}
           >
-            <span style={{ fontSize: '0.8em', marginRight: '6px' }}>💬</span> Escríbenos al WhatsApp
+            <span style={{ fontSize: '0.8em', marginRight: '6px' }}>💬</span> WhatsApp: 0416-7130325
           </a>
 
         </div>
@@ -44,7 +44,7 @@ function App() {
               className="btn btn-primary btn-large"
               style={{ display: 'inline-block' }}
             >
-              <span style={{ fontSize: '0.8em', marginRight: '6px' }}>💬</span> Escríbenos al WhatsApp
+              <span style={{ fontSize: '0.8em', marginRight: '6px' }}>💬</span> WhatsApp: 0416-7130325
             </a>
           </div>
         </div>
@@ -189,7 +189,8 @@ function App() {
             <p>Supera tus límites con la mejor comunidad de fitness.</p>
             <div className="company-details">
               <p><strong>Energy Box C.A.</strong></p>
-              <p>RIF: J-504118702</p>
+              <p><strong>RIF:</strong> J-504118702</p>
+              <p><strong>Teléfono:</strong> 0416-7130325</p>
             </div>
           </div>
 
@@ -205,7 +206,7 @@ function App() {
               className="btn btn-primary btn-large"
               style={{ display: 'inline-block' }}
             >
-              <span style={{ fontSize: '1.2rem', marginRight: '8px' }}>💬</span> Escríbenos al WhatsApp
+              <span style={{ fontSize: '1.2rem', marginRight: '8px' }}>💬</span> WhatsApp: 0416-7130325
             </a>
           </div>
         </div>
