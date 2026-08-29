@@ -34,7 +34,7 @@ function App() {
         <div className="container hero-content">
           <h1>Desata Tu<br /><span className="text-highlight">Verdadero Potencial</span></h1>
           <p>
-            Entrenamiento funcional de alta intensidad diseñado para transformar tu cuerpo y mente. Únete a la comunidad de Energy Box C.A.
+            Entrenamiento funcional de alta intensidad diseñado para transformar tu cuerpo y mente. Únete a la comunidad de Energy Box C.A. en <strong>Guarenas</strong>.
           </p>
           <div className="hero-buttons">
             <a
@@ -139,7 +139,8 @@ function App() {
         <div className="container">
           <h2 className="section-title">Nuestra <span className="text-highlight">Ubicación</span></h2>
           <p style={{ textAlign: 'center', marginBottom: '2rem' }}>
-            Ven a conocernos y vive la experiencia Energy Box.
+            Ven a conocernos y vive la experiencia Energy Box en <strong>Guarenas</strong>.<br/>
+            📍 Avenida principal las clavellinas, Al lado de la cancha techada, Guarenas, Municipio Plaza, Estado Miranda.
           </p>
           <div className="map-container">
             <iframe
@@ -188,7 +189,7 @@ function App() {
             <img src="/assets/logo.png" alt="Energy Box Logo Footer" className="footer-logo" />
             <p>Supera tus límites con la mejor comunidad de fitness.</p>
             <div className="company-details">
-              <p><strong>Energy Box C.A.</strong></p>
+              <p><strong>Energy Box C.A. - Guarenas</strong></p>
               <p><strong>RIF:</strong> J-504118702</p>
               <p><strong>Teléfono:</strong> 0416-7130325</p>
             </div>
