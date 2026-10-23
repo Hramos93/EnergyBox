@@ -1,32 +1,43 @@
 import React from 'react';
+import CompetenciaRegistro from './components/CompetenciaRegistro';
 
 function App() {
   return (
     <>
-      {/* Header / Navbar */}
-      <nav className="navbar">
-        <div className="container nav-container">
-          <a href="#" className="logo">
-            <img src="/assets/logo.png" alt="Energy Box C.A. Logo" />
-          </a>
-          <ul className="nav-links">
-            <li><a href="#disciplinas">Disciplinas</a></li>
-            <li><a href="#horarios">Horarios y Tarifas</a></li>
-            <li><a href="#ubicacion">Ubicación</a></li>
-            <li><a href="#faq">FAQ</a></li>
-          </ul>
-          <a
-            href="https://wa.me/584167130325?text=Hola,%20me%20gustar%C3%ADa%20reservar%20!"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn btn-primary btn-large"
-            style={{ display: 'inline-block' }}
-          >
-            <span style={{ fontSize: '0.8em', marginRight: '6px' }}>💬</span> WhatsApp: 0416-7130325
-          </a>
-
+      {/* Header Unificado Fijo */}
+      <div className="site-header-fixed">
+        {/* Barra de Anuncio Superior - Competencia Interna */}
+        <div className="top-notice-bar">
+          <span>🔥 <strong>1ª Competencia Interna Energy Box:</strong> Duplas Femeninas (Principiante) &bull; Exclusivo Atletas Activas</span>
+          <a href="#competencia">Inscribirse Aquí &darr;</a>
         </div>
-      </nav>
+
+        {/* Header / Navbar */}
+        <nav className="navbar">
+          <div className="container nav-container">
+            <a href="#" className="logo">
+              <img src="/assets/logo.png" alt="Energy Box C.A. Logo" />
+            </a>
+            <ul className="nav-links">
+              <li><a href="#competencia" className="nav-link-highlight">🏆 Competencia</a></li>
+              <li><a href="#disciplinas">Disciplinas</a></li>
+              <li><a href="#horarios">Horarios y Tarifas</a></li>
+              <li><a href="#ubicacion">Ubicación</a></li>
+              <li><a href="#faq">FAQ</a></li>
+            </ul>
+            <a
+              href="https://wa.me/584167130325?text=Hola,%20me%20gustar%C3%ADa%20reservar%20!"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn btn-primary btn-large"
+              style={{ display: 'inline-block' }}
+            >
+              <span style={{ fontSize: '0.8em', marginRight: '6px' }}>💬</span> WhatsApp: 0416-7130325
+            </a>
+
+          </div>
+        </nav>
+      </div>
 
       {/* Hero Section */}
       <header className="hero">
@@ -38,17 +49,42 @@ function App() {
           </p>
           <div className="hero-buttons">
             <a
+              href="#competencia"
+              className="btn btn-primary btn-large"
+              style={{ display: 'inline-block', marginRight: '1rem', marginBottom: '0.5rem' }}
+            >
+              🏆 Inscribir Dupla
+            </a>
+            <a
               href="https://wa.me/584167130325?text=Hola,%20me%20gustar%C3%ADa%20reservar%20!"
               target="_blank"
               rel="noopener noreferrer"
-              className="btn btn-primary btn-large"
+              className="btn btn-secondary btn-large"
               style={{ display: 'inline-block' }}
             >
-              <span style={{ fontSize: '0.8em', marginRight: '6px' }}>💬</span> WhatsApp: 0416-7130325
+              <span style={{ fontSize: '0.8em', marginRight: '6px' }}>💬</span> Contactar
             </a>
           </div>
         </div>
       </header>
+
+      {/* SECCIÓN DESTACADA: Competencia Interna Duplas Femeninas */}
+      <section id="competencia" className="section section-competencia">
+        <div className="container" style={{ textAlign: 'center' }}>
+          <span className="competencia-badge">⚡ Evento Exclusivo de la Comunidad</span>
+          <h2 className="section-title" style={{ marginBottom: '1rem' }}>
+            1ª Competencia Interna <br />
+            <span className="text-highlight">Duplas Femeninas</span>
+          </h2>
+          <p className="competencia-subtitle">
+            ¡Mide tu fuerza y resistencia junto a tu compañera de WOD! <br />
+            <strong>Categoría:</strong> Principiante &bull; <strong>Modalidad:</strong> Duplas Mujer - Mujer &bull; <strong>Costo:</strong> Gratuito ($0) para atletas activas.
+          </p>
+
+          {/* Formulario Dinámico Paso a Paso */}
+          <CompetenciaRegistro />
+        </div>
+      </section>
 
       {/* Disciplinas Section */}
       <section id="disciplinas" className="section">

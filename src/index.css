@@ -101,14 +101,20 @@ ul {
     width: 100%;
 }
 
+/* Header Unificado Fijo */
+.site-header-fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
 /* Navbar */
 .navbar {
     background-color: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(10px);
-    position: fixed;
     width: 100%;
-    top: 0;
-    z-index: 1000;
     border-bottom: 1px solid #E5E7EB;
 }
 
@@ -435,4 +441,464 @@ ul {
     .section {
         padding: 60px 0;
     }
+}
+
+/* =========================================================================
+   COMPETENCIA INTERNA - SECCIÓN Y FORMULARIO DINÁMICO
+   ========================================================================= */
+
+/* Top Notice Banner encima del Navbar */
+.top-notice-bar {
+    background: linear-gradient(90deg, #F59E0B 0%, #FACC15 50%, #F59E0B 100%);
+    color: #030712;
+    padding: 10px 20px;
+    font-size: 0.95rem;
+    font-weight: 700;
+    text-align: center;
+    position: relative;
+    z-index: 1001;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    box-shadow: 0 2px 10px rgba(245, 158, 11, 0.3);
+}
+
+.top-notice-bar a {
+    background-color: #030712;
+    color: #FACC15;
+    padding: 4px 12px;
+    border-radius: 9999px;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    font-weight: 800;
+    transition: transform var(--transition-speed);
+}
+
+.top-notice-bar a:hover {
+    transform: scale(1.05);
+}
+
+/* Badge en el Navbar */
+.nav-link-highlight {
+    background-color: #FACC15;
+    color: #030712 !important;
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-weight: 800 !important;
+}
+
+/* Sección de la Competencia */
+.section-competencia {
+    background: radial-gradient(circle at 50% 0%, #1F2937 0%, #111827 60%, #030712 100%);
+    border-top: 2px solid #FACC15;
+    border-bottom: 2px solid #FACC15;
+    padding: 80px 0;
+    position: relative;
+}
+
+.competencia-badge {
+    display: inline-block;
+    background-color: rgba(250, 204, 21, 0.15);
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    padding: 6px 18px;
+    border-radius: 9999px;
+    font-weight: 800;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 1rem;
+}
+
+.competencia-subtitle {
+    font-size: 1.2rem;
+    text-align: center;
+    max-width: 650px;
+    margin: 0 auto 3rem auto;
+    color: #D1D5DB;
+}
+
+/* Contenedor de la Tarjeta Paso a Paso */
+.competencia-card-container {
+    max-width: 620px;
+    margin: 0 auto;
+    background: #111827;
+    border: 1px solid #374151;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6), 0 0 20px rgba(250, 204, 21, 0.1);
+    overflow: hidden;
+    padding: 2.5rem;
+}
+
+/* Barra de Pasos */
+.competencia-steps-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 2.5rem;
+}
+
+.step-indicator {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    color: #6B7280;
+    transition: all 0.3s ease;
+}
+
+.step-indicator.active {
+    color: var(--primary-color);
+}
+
+.step-num {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background-color: #1F2937;
+    border: 2px solid #4B5563;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    font-size: 1.1rem;
+    color: #9CA3AF;
+}
+
+.step-indicator.active .step-num {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    color: #030712;
+    box-shadow: 0 0 12px rgba(250, 204, 21, 0.5);
+}
+
+.step-label {
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.step-divider {
+    flex: 1;
+    height: 2px;
+    background-color: #374151;
+    margin: 0 12px;
+    margin-bottom: 20px;
+}
+
+/* Animaciones de Entrada */
+.step-form-animated {
+    animation: fadeInStep 0.35s ease forwards;
+}
+
+@keyframes fadeInStep {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.step-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.step-badge {
+    display: inline-block;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #E5E7EB;
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 0.8rem;
+}
+
+.step-header h3 {
+    font-size: 1.6rem;
+    color: var(--white);
+    margin-bottom: 0.5rem;
+}
+
+.step-header p {
+    color: #9CA3AF;
+    font-size: 0.95rem;
+}
+
+.input-group {
+    margin-bottom: 1.5rem;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 0.6rem;
+    font-weight: 700;
+    color: #F3F4F6;
+    font-size: 1rem;
+}
+
+.input-field {
+    width: 100%;
+    padding: 16px;
+    border-radius: 8px;
+    border: 2px solid #374151;
+    background-color: #030712;
+    color: var(--white);
+    font-size: 1.2rem;
+    font-weight: 700;
+    transition: all 0.25s ease;
+}
+
+.input-field:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 12px rgba(250, 204, 21, 0.3);
+}
+
+.atleta-validada-box {
+    background-color: rgba(16, 185, 129, 0.15);
+    border: 1px solid #10B981;
+    color: #A7F3D0;
+    padding: 10px 14px;
+    border-radius: 8px;
+    margin-bottom: 1.2rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.95rem;
+}
+
+.error-alert {
+    background-color: rgba(239, 68, 68, 0.15);
+    border: 1px solid #EF4444;
+    color: #FCA5A5;
+    padding: 12px 16px;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+.step-buttons-group {
+    display: flex;
+    gap: 12px;
+}
+
+.btn-step {
+    padding: 16px;
+    font-size: 1.1rem;
+    flex: 1;
+}
+
+.btn-secondary {
+    background-color: #374151;
+    color: var(--white);
+    padding: 16px 24px;
+}
+
+.btn-secondary:hover {
+    background-color: #4B5563;
+}
+
+/* Pantalla Final de Éxito */
+.step-success-animated {
+    text-align: center;
+    animation: fadeInStep 0.4s ease forwards;
+}
+
+.success-icon {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    animation: bounce 1s ease infinite alternate;
+}
+
+@keyframes bounce {
+    from { transform: translateY(0); }
+    to { transform: translateY(-8px); }
+}
+
+.success-badge {
+    background-color: #065F46;
+    color: #A7F3D0;
+}
+
+.dupla-summary-card {
+    background-color: #030712;
+    border: 1px solid #374151;
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin: 2rem 0;
+    text-align: left;
+}
+
+.summary-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #1F2937;
+    font-size: 1rem;
+}
+
+.summary-row:last-child {
+    border-bottom: none;
+}
+
+.summary-label {
+    color: #9CA3AF;
+}
+
+.summary-value {
+    color: var(--white);
+    font-weight: 700;
+}
+
+.whatsapp-action-box {
+    margin-top: 1.5rem;
+}
+
+.whatsapp-action-box p {
+    color: #D1D5DB;
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+}
+
+.btn-whatsapp-finish {
+    background-color: #25D366;
+    color: #FFFFFF;
+    font-size: 1.15rem;
+    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+}
+
+.btn-whatsapp-finish:hover {
+    background-color: #20BD5A;
+    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6);
+}
+
+/* Mejoras Fase 3: Barra de Progreso Porcentual */
+.progress-bar-wrapper {
+    width: 100%;
+    height: 6px;
+    background-color: #1F2937;
+    border-radius: 9999px;
+    margin-bottom: 2rem;
+    overflow: hidden;
+}
+
+.progress-bar-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #F59E0B, #FACC15);
+    transition: width 0.4s ease-in-out;
+    box-shadow: 0 0 10px rgba(250, 204, 21, 0.5);
+}
+
+/* Enlace de ayuda en caso de error */
+.error-help-link {
+    display: inline-block;
+    margin-top: 8px;
+    color: #FACC15;
+    font-weight: 700;
+    text-decoration: underline;
+    font-size: 0.85rem;
+    transition: color var(--transition-speed);
+}
+
+.error-help-link:hover {
+    color: #FFFFFF;
+}
+
+/* Mini FAQ deportiva dentro de la tarjeta */
+.competencia-mini-faq {
+    margin-top: 2.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #374151;
+    text-align: left;
+}
+
+.competencia-mini-faq h4 {
+    color: #E5E7EB;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.competencia-mini-faq details {
+    background-color: #030712;
+    border: 1px solid #1F2937;
+    border-radius: 8px;
+    margin-bottom: 0.8rem;
+    padding: 10px 14px;
+}
+
+.competencia-mini-faq summary {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: #D1D5DB;
+    cursor: pointer;
+}
+
+.competencia-mini-faq summary:hover {
+    color: var(--primary-color);
+}
+
+.competencia-mini-faq p {
+    font-size: 0.85rem;
+    color: #9CA3AF;
+    margin-top: 8px;
+    line-height: 1.5;
+}
+
+/* Confetti CSS Animado */
+.confetti-container {
+    position: relative;
+    width: 100%;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 1rem;
+    overflow: hidden;
+}
+
+.confetti-piece {
+    width: 8px;
+    height: 14px;
+    background-color: #FACC15;
+    animation: confettiFall 2s ease infinite;
+}
+
+.confetti-piece:nth-child(2) { background-color: #10B981; animation-delay: 0.3s; }
+.confetti-piece:nth-child(3) { background-color: #3B82F6; animation-delay: 0.6s; }
+.confetti-piece:nth-child(4) { background-color: #EC4899; animation-delay: 0.9s; }
+.confetti-piece:nth-child(5) { background-color: #8B5CF6; animation-delay: 1.2s; }
+
+@keyframes confettiFall {
+    0% { transform: translateY(-20px) rotate(0deg); opacity: 1; }
+    100% { transform: translateY(40px) rotate(360deg); opacity: 0; }
+}
+
+/* Botón secundario para copiar texto al portapapeles */
+.btn-copy-mensaje {
+    margin-top: 10px;
+    width: 100%;
+    background-color: transparent;
+    border: 1px dashed #4B5563;
+    color: #9CA3AF;
+    font-size: 0.9rem;
+    padding: 10px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all var(--transition-speed);
+}
+
+.btn-copy-mensaje:hover {
+    border-color: var(--primary-color);
+    color: #FFFFFF;
+    background-color: rgba(250, 204, 21, 0.05);
 }

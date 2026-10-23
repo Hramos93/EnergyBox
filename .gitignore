@@ -7,15 +7,42 @@ build/
 .next/
 out/
 
-# Variables de entorno (Secretos)
+# Variables de entorno y credenciales (Blindaje de Ciberseguridad)
 .env
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
+.env.*
+*.env
+*.pem
+*.key
+*credentials*.json
+*token*.json
+*recovery*
+
+# Archivos de datos sensibles, hojas de cálculo y documentos privados
+*.xlsx
+*.xls
+*.csv
+*.tsv
+*.pdf
+*.docx
+*.doc
+
+# Arquitectura Interna de Agentes, Memoria y Scripts Locales (Confidencial)
+GEMINI.md
+harness/
+memory/
+backend/
+tests/
+
+# Archivos temporales del sistema y del editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*Nuevo Documento*
 
 # Logs de NPM y errores
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
+*.log
