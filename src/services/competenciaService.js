@@ -4,8 +4,8 @@
  * CERO FALSOS POSITIVOS: Si no existe en el Google Sheet, se rechaza estrictamente.
  */
 
-// Endpoint oficial de producción en Google Apps Script
-const DEFAULT_WEBHOOK_URL = 'https://script.google.com/macros/s/AKfycbxdWp1qWDJUAB8zEk4v2c6oAPvdB8v7y927xj0MN3iiyEfZLV0xQo4LyQKm369NKawg/exec';
+// Endpoint oficial de producción en Google Apps Script (V6 Directo)
+const DEFAULT_WEBHOOK_URL = 'https://script.google.com/macros/s/AKfycbzRbnrong4hyJvWvdvNlsRhv2t513Q-VzVSJw40QaH_FfU7K3DVcjpPkgWWY57sb0bm/exec';
 const WEBHOOK_URL = (typeof import.meta !== 'undefined' && import.meta.env?.VITE_COMPETENCIA_API_URL) || DEFAULT_WEBHOOK_URL;
 
 /**
@@ -32,17 +32,25 @@ export async function validarAtleta(cedula) {
   }
 
   try {
+    const controller = new AbortController();
+    const timeoutId = setTimeout(() => controller.abort(), 12000);
+
     const url = `${WEBHOOK_URL}?action=validar&cedula=${encodeURIComponent(cedulaLimpia)}`;
-    const res = await fetch(url, { method: 'GET' });
+    const res = await fetch(url, { method: 'GET', signal: controller.signal });
+    clearTimeout(timeoutId);
+
     if (!res.ok) throw new Error(`HTTP error ${res.status}`);
     const data = await res.json();
     return data;
   } catch (err) {
     console.error('[CompetenciaService] Error al conectar con el Webhook:', err.message);
+    const msg = err.name === 'AbortError' 
+      ? 'La conexión con Google Sheets tardó más de 12 segundos. Por favor intenta de nuevo.' 
+      : 'No pudimos verificar la cédula con el sistema del Box. Revisa tu conexión a internet o intenta nuevamente.';
     return {
       success: false,
       active: false,
-      message: 'No pudimos verificar la cédula con el sistema del Box. Revisa tu conexión a internet o intenta nuevamente.'
+      message: msg
     };
   }
 }
