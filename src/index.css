@@ -474,6 +474,19 @@ ul {
     font-size: 0.9rem;
 }
 
+/* Desktop / Mobile CTA Helpers */
+.mobile-drawer-cta {
+    display: none;
+}
+
+.nav-desktop-cta {
+    display: inline-block;
+}
+
+.nav-hamburger {
+    display: none;
+}
+
 /* Responsive Design */
 @media (max-width: 992px) {
     .schedule-pricing-container {
@@ -484,19 +497,133 @@ ul {
         grid-template-columns: 1fr;
         gap: 2rem;
     }
+
+    .nav-desktop-cta {
+        display: none;
+    }
+
+    /* Botón Hamburguesa */
+    .nav-hamburger {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 36px;
+        height: 28px;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        padding: 2px;
+        z-index: 1002;
+    }
+
+    .hamburger-line {
+        width: 100%;
+        height: 3px;
+        background-color: var(--dark-bg);
+        border-radius: 9999px;
+        transition: all 0.3s ease;
+    }
+
+    .nav-hamburger.open .hamburger-line:nth-child(1) {
+        transform: translateY(9px) rotate(45deg);
+        background-color: var(--primary-color);
+    }
+
+    .nav-hamburger.open .hamburger-line:nth-child(2) {
+        opacity: 0;
+    }
+
+    .nav-hamburger.open .hamburger-line:nth-child(3) {
+        transform: translateY(-9px) rotate(-45deg);
+        background-color: var(--primary-color);
+    }
+
+    /* Menú Drawer Móvil */
+    .nav-links {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 300px;
+        max-width: 85vw;
+        height: 100vh;
+        background-color: #111827;
+        flex-direction: column;
+        padding: 90px 24px 30px;
+        gap: 1.2rem;
+        box-shadow: -6px 0 30px rgba(0, 0, 0, 0.8);
+        transition: right 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+        z-index: 1001;
+        overflow-y: auto;
+        border-left: 1px solid #374151;
+    }
+
+    .nav-links.nav-links-mobile-open {
+        right: 0;
+    }
+
+    .nav-links a {
+        color: #F3F4F6;
+        font-size: 1.15rem;
+        display: block;
+        padding: 10px 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .nav-links a:hover {
+        color: var(--primary-color);
+    }
+
+    .mobile-drawer-cta {
+        display: block;
+        margin-top: 1.5rem;
+    }
+
+    .mobile-drawer-backdrop {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+        backdrop-filter: blur(4px);
+        z-index: 1000;
+        animation: fadeInBackdrop 0.25s ease forwards;
+    }
+
+    @keyframes fadeInBackdrop {
+        from { opacity: 0; }
+        to { opacity: 1; }
+    }
 }
 
 @media (max-width: 768px) {
-    .nav-links {
-        display: none; /* simple mobile nav approach for MVP */
-    }
-    
     .hero-content h1 {
-        font-size: 3rem;
+        font-size: 2.8rem;
     }
     
     .section {
         padding: 60px 0;
+    }
+}
+
+@media (max-width: 640px) {
+    .nav-container {
+        height: 64px;
+    }
+
+    .logo img {
+        height: 42px;
+    }
+
+    .top-notice-bar {
+        padding: 6px 12px;
+        font-size: 0.8rem;
+        gap: 6px;
+    }
+
+    .top-notice-bar a {
+        font-size: 0.72rem;
+        padding: 2px 8px;
     }
 }
 

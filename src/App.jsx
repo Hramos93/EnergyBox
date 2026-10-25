@@ -1,44 +1,85 @@
-import React from 'react';
+import React, { useState } from 'react';
 import CompetenciaRegistro from './components/CompetenciaRegistro';
 import WhatsAppFloatingButton from './components/WhatsAppFloatingButton';
 
 function App() {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  const handleNavClick = () => {
+    setMobileMenuOpen(false);
+  };
+
   return (
     <>
       {/* Header Unificado Fijo */}
       <div className="site-header-fixed">
         {/* Barra de Anuncio Superior - Competencia Interna */}
         <div className="top-notice-bar">
-          <span>🔥 <strong>1ª Competencia Interna Energy Box:</strong> Duplas Femeninas (Principiante) &bull; Exclusivo Atletas Activas</span>
-          <a href="#competencia">Inscribirse Aquí &darr;</a>
+          <span>🔥 <strong>1ª Competencia Interna:</strong> Duplas Femeninas &bull; Atletas Activas</span>
+          <a href="#competencia">Inscribirse &darr;</a>
         </div>
 
         {/* Header / Navbar */}
         <nav className="navbar">
           <div className="container nav-container">
-            <a href="#" className="logo">
+            <a href="#" className="logo" onClick={handleNavClick}>
               <img src="/assets/logo.png" alt="Energy Box C.A. Logo" />
             </a>
-            <ul className="nav-links">
-              <li><a href="#competencia" className="nav-link-highlight">🏆 Competencia</a></li>
-              <li><a href="#disciplinas">Disciplinas</a></li>
-              <li><a href="#horarios">Horarios y Tarifas</a></li>
-              <li><a href="#ubicacion">Ubicación</a></li>
-              <li><a href="#faq">FAQ</a></li>
+
+            {/* Enlaces de Navegación (Desktop + Drawer Móvil) */}
+            <ul className={`nav-links ${mobileMenuOpen ? 'nav-links-mobile-open' : ''}`}>
+              <li><a href="#competencia" className="nav-link-highlight" onClick={handleNavClick}>🏆 Competencia</a></li>
+              <li><a href="#disciplinas" onClick={handleNavClick}>Disciplinas</a></li>
+              <li><a href="#horarios" onClick={handleNavClick}>Horarios y Tarifas</a></li>
+              <li><a href="#ubicacion" onClick={handleNavClick}>Ubicación</a></li>
+              <li><a href="#faq" onClick={handleNavClick}>FAQ</a></li>
+              <li className="mobile-drawer-cta">
+                <a
+                  href="https://wa.me/584167130325?text=Hola,%20me%20gustar%C3%ADa%20reservar%20!"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn btn-primary btn-block"
+                  onClick={handleNavClick}
+                >
+                  💬 WhatsApp: 0416-7130325
+                </a>
+              </li>
             </ul>
+
+            {/* Botón WhatsApp Desktop */}
             <a
               href="https://wa.me/584167130325?text=Hola,%20me%20gustar%C3%ADa%20reservar%20!"
               target="_blank"
               rel="noopener noreferrer"
-              className="btn btn-primary btn-large"
-              style={{ display: 'inline-block' }}
+              className="btn btn-primary nav-desktop-cta"
             >
-              <span style={{ fontSize: '0.8em', marginRight: '6px' }}>💬</span> WhatsApp: 0416-7130325
+              <span style={{ fontSize: '0.9em', marginRight: '6px' }}>💬</span> WhatsApp: 0416-7130325
             </a>
 
+            {/* Botón Hamburguesa Interactivo y Accesible */}
+            <button
+              type="button"
+              className={`nav-hamburger ${mobileMenuOpen ? 'open' : ''}`}
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              aria-label={mobileMenuOpen ? 'Cerrar menú de navegación' : 'Abrir menú de navegación'}
+              aria-expanded={mobileMenuOpen}
+            >
+              <span className="hamburger-line"></span>
+              <span className="hamburger-line"></span>
+              <span className="hamburger-line"></span>
+            </button>
           </div>
         </nav>
       </div>
+
+      {/* Overlay oscuro para cerrar el menú móvil al hacer clic fuera */}
+      {mobileMenuOpen && (
+        <div 
+          className="mobile-drawer-backdrop" 
+          onClick={() => setMobileMenuOpen(false)}
+          aria-hidden="true"
+        ></div>
+      )}
 
       {/* Hero Section */}
       <header className="hero">
