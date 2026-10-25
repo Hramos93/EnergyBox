@@ -6,6 +6,7 @@ import {
   generarTextoConfirmacion,
   normalizarCedula
 } from '../services/competenciaService';
+import { trackCompetenciaStep } from '../services/analytics';
 
 export default function CompetenciaRegistro() {
   const [step, setStep] = useState(1);
@@ -61,6 +62,7 @@ export default function CompetenciaRegistro() {
         setAtleta1(res);
         setStep(2);
         setErrorMsg('');
+        trackCompetenciaStep(1, 'validar_capitana_exitosa');
       } else {
         setErrorMsg(res.message || 'La cédula no figura en el registro de atletas activas.');
       }
@@ -113,6 +115,7 @@ export default function CompetenciaRegistro() {
           atleta2: res.nombre
         });
         setStep(3);
+        trackCompetenciaStep(2, 'registro_dupla_exitosa');
       } else {
         setErrorMsg(regRes.message || 'No se pudo completar el registro.');
       }
@@ -315,6 +318,7 @@ export default function CompetenciaRegistro() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn btn-primary btn-large btn-block btn-whatsapp-finish"
+                onClick={() => trackCompetenciaStep(3, 'whatsapp_confirmacion_enviada')}
               >
                 💬 Enviar Confirmación por WhatsApp (1 Clic)
               </a>

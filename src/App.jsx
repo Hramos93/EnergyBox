@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import CompetenciaRegistro from './components/CompetenciaRegistro';
 import WhatsAppFloatingButton from './components/WhatsAppFloatingButton';
+import { trackWhatsAppLead } from './services/analytics';
 
 function App() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -40,7 +41,10 @@ function App() {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn btn-primary btn-block"
-                  onClick={handleNavClick}
+                  onClick={() => {
+                    handleNavClick();
+                    trackWhatsAppLead('mobile_drawer');
+                  }}
                 >
                   💬 WhatsApp: 0416-7130325
                 </a>
@@ -53,6 +57,7 @@ function App() {
               target="_blank"
               rel="noopener noreferrer"
               className="btn btn-primary nav-desktop-cta"
+              onClick={() => trackWhatsAppLead('navbar_desktop')}
             >
               <span style={{ fontSize: '0.9em', marginRight: '6px' }}>💬</span> WhatsApp: 0416-7130325
             </a>
@@ -98,6 +103,7 @@ function App() {
               rel="noopener noreferrer"
               className="btn btn-primary btn-large btn-glow"
               style={{ display: 'inline-block', marginRight: '1rem', marginBottom: '0.75rem' }}
+              onClick={() => trackWhatsAppLead('hero_free_trial', 'clase_gratis')}
             >
               🔥 Agenda Tu Clase Gratis
             </a>
@@ -326,6 +332,7 @@ function App() {
                     target="_blank"
                     rel="noopener noreferrer"
                     className="btn btn-secondary btn-block btn-pricing-action"
+                    onClick={() => trackWhatsAppLead('pricing_card_semanal', 'Basico-Semanal')}
                   >
                     Elegir Plan Semanal
                   </a>
@@ -355,6 +362,7 @@ function App() {
                     target="_blank"
                     rel="noopener noreferrer"
                     className="btn btn-primary btn-block btn-pricing-action"
+                    onClick={() => trackWhatsAppLead('pricing_card_mensual', 'Basico-Mensual')}
                   >
                     Inscribirme en Plan Mensual
                   </a>
@@ -437,6 +445,7 @@ function App() {
               rel="noopener noreferrer"
               className="btn btn-primary btn-large"
               style={{ display: 'inline-block' }}
+              onClick={() => trackWhatsAppLead('footer_contact')}
             >
               <span style={{ fontSize: '1.2rem', marginRight: '8px' }}>💬</span> WhatsApp: 0416-7130325
             </a>

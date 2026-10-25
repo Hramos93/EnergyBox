@@ -1,4 +1,5 @@
 import React from 'react';
+import { trackWhatsAppLead } from '../services/analytics';
 
 /**
  * Componente Botón Flotante Persistente de WhatsApp (Sticky FAB)
@@ -7,12 +8,7 @@ import React from 'react';
  */
 export default function WhatsAppFloatingButton() {
   const handleClick = () => {
-    if (typeof window !== 'undefined' && typeof window.gtag === 'function') {
-      window.gtag('event', 'contact', {
-        event_category: 'Lead Acquisition',
-        event_label: 'WhatsApp Floating FAB'
-      });
-    }
+    trackWhatsAppLead('floating_fab', 'general_info');
   };
 
   return (
