@@ -172,50 +172,104 @@ function App() {
           <h2 className="section-title">Horarios y <span className="text-highlight">Tarifas</span></h2>
 
           <div className="schedule-pricing-container">
+            {/* Tabla de Horarios */}
             <div className="schedule-box">
               <h3>Horarios de Clases</h3>
+              <p className="schedule-box-subtitle">Lunes a Viernes &bull; Entrenamientos en Guarenas</p>
               <table className="schedule-table">
                 <thead>
                   <tr>
                     <th>Turno</th>
-                    <th>Lunes - Viernes</th>
-
+                    <th colSpan="2">Horarios Disponibles</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
-                    <td>Mañana</td>
+                    <td><strong>Mañana</strong></td>
                     <td>6:30 AM - 7:30 AM</td>
                     <td>7:30 AM - 8:30 AM</td>
                   </tr>
                   <tr>
-                    <td>Mediodía</td>
-                    <td colSpan="2">Cerrado</td>
+                    <td><strong>Mediodía</strong></td>
+                    <td colSpan="2" className="schedule-closed">Cerrado para recuperación</td>
                   </tr>
                   <tr>
-                    <td>Tarde/Noche</td>
+                    <td><strong>Tarde/Noche</strong></td>
                     <td>6:30 PM - 7:30 PM</td>
                     <td>7:30 PM - 8:30 PM</td>
                   </tr>
                 </tbody>
               </table>
+              <div className="schedule-notice">
+                <span>⏱️ Todas las clases inician puntuales e incluyen calentamiento, técnica y WOD guiado.</span>
+              </div>
             </div>
 
+            {/* Tarjetas de Precios y Planes (Fase 4 CRO) */}
             <div className="pricing-box">
-              <h3>Planes Mensuales</h3>
-              <p style={{ textAlign: 'center', marginBottom: '2rem' }}>
-                Ref en $ con costo del plan al Tasa BCV del día
+              <h3>Planes y Membresías</h3>
+              <p className="pricing-bcv-header">
+                💵 Precios en Referencia ($) con cobro en Bolívares a la <strong>Tasa BCV del día</strong>. Sin costo oculto de matrícula.
               </p>
-              <ul className="pricing-list">
-                <li>
-                  <span className="plan-name">Básico-Semanal (3 días/sem)</span>
-                  <span className="plan-price">Ref $5</span>
-                </li>
-                <li>
-                  <span className="plan-name">Básico-Mensual (3 días/sem)</span>
-                  <span className="plan-price">Ref $20</span>
-                </li>
-              </ul>
+
+              <div className="pricing-cards-wrapper">
+                {/* Plan Semanal */}
+                <div className="pricing-card">
+                  <div className="pricing-card-header">
+                    <h4>Básico-Semanal</h4>
+                    <span className="pricing-tag">Flexibilidad Total</span>
+                  </div>
+                  <div className="pricing-amount">
+                    <span className="price-currency">Ref</span>
+                    <span className="price-val">$5</span>
+                    <span className="price-frequency">/ sem</span>
+                  </div>
+                  <p className="pricing-bcv-note">Facturado a Tasa BCV del día</p>
+                  <ul className="pricing-features">
+                    <li>✓ 3 clases por semana a elección</li>
+                    <li>✓ Coaches atentos a tu técnica</li>
+                    <li>✓ Calentamiento y WOD del día</li>
+                    <li>✓ Ideal para semanas puntuales</li>
+                  </ul>
+                  <a
+                    href="https://wa.me/584167130325?text=Hola!%20Me%20interesa%20inscribirme%20en%20el%20Plan%20B%C3%A1sico-Semanal%20(Ref%20$5)%20en%20Energy%20Box"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn btn-secondary btn-block btn-pricing-action"
+                  >
+                    Elegir Plan Semanal
+                  </a>
+                </div>
+
+                {/* Plan Mensual (Destacado) */}
+                <div className="pricing-card pricing-card-featured">
+                  <div className="featured-ribbon">🔥 Más Popular &bull; Mejor Valor</div>
+                  <div className="pricing-card-header">
+                    <h4>Básico-Mensual</h4>
+                    <span className="pricing-tag featured-tag">Resultados & Hábito</span>
+                  </div>
+                  <div className="pricing-amount">
+                    <span className="price-currency">Ref</span>
+                    <span className="price-val">$20</span>
+                    <span className="price-frequency">/ mes</span>
+                  </div>
+                  <p className="pricing-bcv-note">Facturado a Tasa BCV del día</p>
+                  <ul className="pricing-features">
+                    <li>✓ 3 clases semanales continuas (12 al mes)</li>
+                    <li>✓ Seguimiento de tu avance de fuerza</li>
+                    <li>✓ Escalabilidad 100% personalizada</li>
+                    <li>✓ Acceso a eventos y comunidad activa</li>
+                  </ul>
+                  <a
+                    href="https://wa.me/584167130325?text=Hola!%20Me%20interesa%20inscribirme%20en%20el%20Plan%20B%C3%A1sico-Mensual%20(Ref%20$20)%20en%20Energy%20Box"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn btn-primary btn-block btn-pricing-action"
+                  >
+                    Inscribirme en Plan Mensual
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
         </div>

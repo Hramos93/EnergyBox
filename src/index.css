@@ -308,49 +308,182 @@ ul {
     font-weight: 700;
 }
 
-.pricing-list {
-    background-color: var(--dark-bg);
+.schedule-box-subtitle {
+    text-align: center;
+    color: #9CA3AF;
+    font-size: 0.9rem;
+    margin-top: -1rem;
+    margin-bottom: 1.5rem;
+}
+
+.schedule-closed {
+    color: #9CA3AF;
+    font-style: italic;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.schedule-notice {
+    margin-top: 1.2rem;
+    padding: 10px 14px;
+    background-color: rgba(250, 204, 21, 0.08);
+    border: 1px solid rgba(250, 204, 21, 0.2);
     border-radius: 8px;
-    padding: 1.5rem;
+    font-size: 0.85rem;
+    color: #E5E7EB;
+    text-align: center;
 }
 
-.pricing-list li {
+/* =========================================================================
+   FASE 4 CRO: PRICING CARDS (TARJETAS DE PRECIOS OPTIMIZADAS)
+   ========================================================================= */
+.pricing-bcv-header {
+    text-align: center;
+    font-size: 0.95rem;
+    color: #D1D5DB;
+    margin-top: -1rem;
+    margin-bottom: 2rem;
+    line-height: 1.5;
+}
+
+.pricing-cards-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    align-items: stretch;
+}
+
+.pricing-card {
+    background-color: var(--dark-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 14px;
+    padding: 2rem 1.5rem 1.8rem;
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
-    padding: 15px 0;
-    border-bottom: 1px solid var(--border-color);
-    font-size: 1.2rem;
+    position: relative;
+    transition: transform var(--transition-speed), border-color var(--transition-speed), box-shadow var(--transition-speed);
 }
 
-.pricing-list li:last-child {
+.pricing-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--primary-color);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+}
+
+.pricing-card-featured {
+    border: 2px solid var(--primary-color);
+    background: linear-gradient(180deg, #1F2937 0%, #111827 100%);
+    box-shadow: 0 8px 30px rgba(250, 204, 21, 0.15);
+}
+
+.featured-ribbon {
+    position: absolute;
+    top: -13px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--primary-color);
+    color: #030712;
+    padding: 4px 14px;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    white-space: nowrap;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.4);
+}
+
+.pricing-card-header {
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+.pricing-card-header h4 {
+    font-size: 1.4rem;
+    color: var(--white);
+    margin-bottom: 4px;
+    font-weight: 800;
+}
+
+.pricing-tag {
+    font-size: 0.78rem;
+    color: #9CA3AF;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.featured-tag {
+    color: var(--primary-color);
+}
+
+.pricing-amount {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    gap: 4px;
+    margin: 1rem 0 0.2rem;
+}
+
+.price-currency {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #9CA3AF;
+}
+
+.price-val {
+    font-size: 2.8rem;
+    font-weight: 900;
+    color: var(--primary-color);
+    line-height: 1;
+}
+
+.price-frequency {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #9CA3AF;
+}
+
+.pricing-bcv-note {
+    font-size: 0.8rem;
+    color: #9CA3AF;
+    text-align: center;
+    margin-bottom: 1.2rem;
+}
+
+.pricing-features {
+    margin: 0.5rem 0 1.5rem;
+    text-align: left;
+    list-style: none;
+    padding: 0;
+}
+
+.pricing-features li {
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    font-size: 0.88rem;
+    color: #D1D5DB;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.pricing-features li:last-child {
     border-bottom: none;
 }
 
-.plan-name {
-    color: var(--white);
-    font-weight: 700;
+.btn-pricing-action {
+    margin-top: auto;
+    font-size: 0.95rem;
+    font-weight: 800;
+    padding: 14px 18px;
 }
 
-.plan-price {
-    color: var(--primary-color);
-    font-weight: 900;
-}
-
-.highlight-plan {
-    position: relative;
-}
-
-.highlight-plan::after {
-    content: 'Recomendado';
-    position: absolute;
-    top: -10px;
-    right: 0;
-    background-color: var(--primary-color);
-    color: var(--darker-bg);
-    font-size: 0.7rem;
-    padding: 2px 8px;
-    border-radius: 12px;
-    font-weight: 700;
+@media (max-width: 600px) {
+    .pricing-cards-wrapper {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
 }
 
 /* FAQ Accordion */
