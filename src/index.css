@@ -959,3 +959,114 @@ ul {
     color: #FFFFFF;
     background-color: rgba(250, 204, 21, 0.05);
 }
+
+/* =========================================================================
+   FASE 2 CRO: BOTÓN FLOTANTE PERSISTENTE DE WHATSAPP (STICKY FAB)
+   ========================================================================= */
+.whatsapp-floating-fab {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    background-color: #25D366;
+    color: #FFFFFF;
+    width: 62px;
+    height: 62px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 20px rgba(37, 211, 102, 0.45);
+    z-index: 999;
+    transition: transform 0.25s ease, background-color 0.25s ease, box-shadow 0.25s ease;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.whatsapp-floating-fab:hover {
+    transform: scale(1.08);
+    background-color: #20BD5A;
+    box-shadow: 0 6px 25px rgba(37, 211, 102, 0.6);
+    color: #FFFFFF;
+}
+
+.fab-svg-icon {
+    width: 34px;
+    height: 34px;
+    fill: #FFFFFF;
+}
+
+.fab-pulse {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: #25D366;
+    opacity: 0.6;
+    animation: fabPulse 2.4s infinite ease-out;
+    z-index: -1;
+    pointer-events: none;
+}
+
+@keyframes fabPulse {
+    0% {
+        transform: scale(1);
+        opacity: 0.6;
+    }
+    50% {
+        opacity: 0.3;
+    }
+    100% {
+        transform: scale(1.55);
+        opacity: 0;
+    }
+}
+
+.fab-tooltip {
+    position: absolute;
+    right: 74px;
+    background-color: #030712;
+    color: #FFFFFF;
+    padding: 7px 14px;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    white-space: nowrap;
+    border: 1px solid #374151;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+    opacity: 0;
+    transform: translateX(10px);
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    pointer-events: none;
+}
+
+.fab-tooltip::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: -6px;
+    transform: translateY(-50%);
+    border-width: 6px 0 6px 6px;
+    border-style: solid;
+    border-color: transparent transparent transparent #030712;
+}
+
+.whatsapp-floating-fab:hover .fab-tooltip {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+@media (max-width: 640px) {
+    .whatsapp-floating-fab {
+        bottom: 18px;
+        right: 18px;
+        width: 56px;
+        height: 56px;
+    }
+    .fab-svg-icon {
+        width: 30px;
+        height: 30px;
+    }
+    .fab-tooltip {
+        display: none;
+    }
+}

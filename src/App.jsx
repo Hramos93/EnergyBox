@@ -1,5 +1,6 @@
 import React from 'react';
 import CompetenciaRegistro from './components/CompetenciaRegistro';
+import WhatsAppFloatingButton from './components/WhatsAppFloatingButton';
 
 function App() {
   return (
@@ -260,6 +261,9 @@ function App() {
           <p>&copy; 2026 Energy Box C.A. Todos los derechos reservados.</p>
         </div>
       </footer>
+
+      {/* Botón Flotante Persistente de WhatsApp (Fase 2 CRO) */}
+      <WhatsAppFloatingButton />
     </>
   );
 }
