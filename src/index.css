@@ -274,6 +274,195 @@ ul {
     font-size: 1.5rem;
 }
 
+/* =========================================================================
+   FASE 5 CRO: COMUNIDAD, COACHES Y PRUEBA SOCIAL
+   ========================================================================= */
+.section-comunidad {
+    background: radial-gradient(circle at 50% 20%, #1F2937 0%, #111827 70%, #030712 100%);
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.comunidad-intro-subtitle {
+    text-align: center;
+    color: #D1D5DB;
+    max-width: 680px;
+    margin: -1.5rem auto 3.5rem;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.coaches-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-bottom: 5rem;
+}
+
+.coach-card {
+    background-color: #111827;
+    border: 1px solid #374151;
+    border-radius: 14px;
+    padding: 2.2rem 1.8rem;
+    text-align: center;
+    transition: transform var(--transition-speed), border-color var(--transition-speed);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.coach-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--primary-color);
+}
+
+.coach-card-featured {
+    border-color: rgba(250, 204, 21, 0.4);
+    background: linear-gradient(180deg, #1F2937 0%, #111827 100%);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+.coach-avatar-icon {
+    font-size: 3.2rem;
+    margin-bottom: 1.2rem;
+}
+
+.coach-card h3 {
+    color: var(--white);
+    font-size: 1.35rem;
+    margin-bottom: 4px;
+    font-weight: 800;
+}
+
+.coach-role {
+    color: var(--primary-color);
+    font-size: 0.82rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.coach-card p {
+    color: #9CA3AF;
+    font-size: 0.92rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    flex: 1;
+}
+
+.coach-pill {
+    display: inline-block;
+    background-color: rgba(255, 255, 255, 0.06);
+    color: #E5E7EB;
+    padding: 5px 14px;
+    border-radius: 9999px;
+    font-size: 0.78rem;
+    font-weight: 700;
+    border: 1px solid #374151;
+}
+
+.coach-pill-gold {
+    background-color: rgba(250, 204, 21, 0.15);
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.testimonials-section-wrapper {
+    margin-top: 2rem;
+    text-align: center;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.testimonials-heading {
+    font-size: 2.2rem;
+    color: var(--white);
+    margin-bottom: 0.5rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.testimonials-subheading {
+    color: #9CA3AF;
+    font-size: 0.98rem;
+    margin-bottom: 3rem;
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.testimonial-card {
+    background-color: #030712;
+    border: 1px solid #1F2937;
+    border-radius: 14px;
+    padding: 2.2rem 1.8rem;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform var(--transition-speed), border-color var(--transition-speed);
+}
+
+.testimonial-card:hover {
+    transform: translateY(-4px);
+    border-color: #374151;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
+}
+
+.testimonial-stars {
+    font-size: 1.15rem;
+    margin-bottom: 1.2rem;
+}
+
+.testimonial-text {
+    font-size: 0.96rem;
+    line-height: 1.65;
+    color: #D1D5DB;
+    margin-bottom: 1.8rem;
+    font-style: italic;
+    flex: 1;
+}
+
+.testimonial-author-box {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.author-avatar {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    color: #030712;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 900;
+    font-size: 0.92rem;
+    box-shadow: 0 0 12px rgba(250, 204, 21, 0.3);
+}
+
+.author-info strong {
+    display: block;
+    color: var(--white);
+    font-size: 0.98rem;
+}
+
+.author-info span {
+    display: block;
+    color: #9CA3AF;
+    font-size: 0.82rem;
+}
+
 /* Schedule & Pricing */
 .schedule-pricing-container {
     display: grid;

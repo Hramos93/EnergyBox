@@ -30,6 +30,7 @@ function App() {
             <ul className={`nav-links ${mobileMenuOpen ? 'nav-links-mobile-open' : ''}`}>
               <li><a href="#competencia" className="nav-link-highlight" onClick={handleNavClick}>🏆 Competencia</a></li>
               <li><a href="#disciplinas" onClick={handleNavClick}>Disciplinas</a></li>
+              <li><a href="#comunidad" onClick={handleNavClick}>Comunidad & Coaches</a></li>
               <li><a href="#horarios" onClick={handleNavClick}>Horarios y Tarifas</a></li>
               <li><a href="#ubicacion" onClick={handleNavClick}>Ubicación</a></li>
               <li><a href="#faq" onClick={handleNavClick}>FAQ</a></li>
@@ -161,6 +162,95 @@ function App() {
               <div className="card-icon">🏃‍♂️</div>
               <h3>Endurance</h3>
               <p>Aumenta tu capacidad aeróbica y resistencia cardiovascular para ir siempre un paso más allá.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* SECCIÓN COMUNIDAD, COACHES Y PRUEBA SOCIAL (Fase 5 CRO) */}
+      <section id="comunidad" className="section section-comunidad">
+        <div className="container">
+          <h2 className="section-title">Comunidad y <span className="text-highlight">Coaches</span></h2>
+          <p className="comunidad-intro-subtitle">
+            Detrás de cada repetición hay un coach cuidando tu postura y una comunidad en <strong>Guarenas</strong> motivándote a superarte cada día.
+          </p>
+
+          {/* Tarjetas de Pilares Técnicos y Coaches */}
+          <div className="coaches-grid">
+            <div className="coach-card">
+              <div className="coach-avatar-icon">🏋️‍♂️</div>
+              <h3>Coaches Dedicados</h3>
+              <span className="coach-role">Técnica & Metodología</span>
+              <p>Especialistas en levantamiento olímpico y gimnasia funcional. Adaptamos las cargas y movimientos para que entrenes con 0% riesgo y 100% efectividad.</p>
+              <span className="coach-pill">✓ Escalabilidad Total</span>
+            </div>
+
+            <div className="coach-card coach-card-featured">
+              <div className="coach-avatar-icon">🤝</div>
+              <h3>Comunidad Sin Egos</h3>
+              <span className="coach-role">El Box de Guarenas</span>
+              <p>Celebramos tanto al que levanta 100 kg como al que logra su primera flexión. En Las Clavellinas todos nos apoyamos para no abandonar.</p>
+              <span className="coach-pill coach-pill-gold">✓ Ambiente Inclusivo</span>
+            </div>
+
+            <div className="coach-card">
+              <div className="coach-avatar-icon">🛡️</div>
+              <h3>Salud Articular Primero</h3>
+              <span className="coach-role">Prevención de Lesiones</span>
+              <p>Priorizamos la biomecánica correcta antes de la intensidad. Queremos que desarrolles fuerza y salud sostenible a lo largo de los años.</p>
+              <span className="coach-pill">✓ Supervisión en Cada Rep</span>
+            </div>
+          </div>
+
+          {/* Testimonios Reales de Atletas */}
+          <div className="testimonials-section-wrapper">
+            <h3 className="testimonials-heading">
+              Lo que dice nuestra <span className="text-highlight">Comunidad</span>
+            </h3>
+            <p className="testimonials-subheading">Historias reales de personas que empezaron desde cero en Las Clavellinas</p>
+
+            <div className="testimonials-grid">
+              <div className="testimonial-card">
+                <div className="testimonial-stars">⭐⭐⭐⭐⭐</div>
+                <p className="testimonial-text">
+                  "Tenía años sin hacer deporte y me daba miedo el CrossFit por temor a lesionarme. En Energy Box los entrenadores me enseñaron paso a paso desde el primer día. ¡Hoy es mi mejor momento del día!"
+                </p>
+                <div className="testimonial-author-box">
+                  <div className="author-avatar">MG</div>
+                  <div className="author-info">
+                    <strong>Mariana Gómez</strong>
+                    <span>Atleta activa &bull; Turno Mañana</span>
+                  </div>
+                </div>
+              </div>
+
+              <div className="testimonial-card">
+                <div className="testimonial-stars">⭐⭐⭐⭐⭐</div>
+                <p className="testimonial-text">
+                  "El compañerismo en Las Clavellinas es increíble. Los coaches tienen una paciencia de oro y el turno de la noche me queda perfecto después de salir del trabajo. 100% recomendado."
+                </p>
+                <div className="testimonial-author-box">
+                  <div className="author-avatar">CR</div>
+                  <div className="author-info">
+                    <strong>Carlos Rodríguez</strong>
+                    <span>Atleta activo &bull; Turno Noche</span>
+                  </div>
+                </div>
+              </div>
+
+              <div className="testimonial-card">
+                <div className="testimonial-stars">⭐⭐⭐⭐⭐</div>
+                <p className="testimonial-text">
+                  "El ambiente es súper sano, las instalaciones están impecables y las tarifas a tasa oficial BCV son completamente claras y justas. No cambio Energy Box por nada."
+                </p>
+                <div className="testimonial-author-box">
+                  <div className="author-avatar">EP</div>
+                  <div className="author-info">
+                    <strong>Elena Pacheco</strong>
+                    <span>Atleta activa &bull; Principiante</span>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
