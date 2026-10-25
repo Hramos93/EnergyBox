@@ -43,27 +43,36 @@ function App() {
       <header className="hero">
         <div className="hero-overlay"></div>
         <div className="container hero-content">
-          <h1>Desata Tu<br /><span className="text-highlight">Verdadero Potencial</span></h1>
+          <div className="hero-location-badge">📍 Guarenas &bull; Las Clavellinas</div>
+          <h1>El Box de CrossFit y<br /><span className="text-highlight">Entrenamiento Funcional</span></h1>
           <p>
-            Entrenamiento funcional de alta intensidad diseñado para transformar tu cuerpo y mente. Únete a la comunidad de Energy Box C.A. en <strong>Guarenas</strong>.
+            Entrena con coaches certificados en <strong>Guarenas</strong>. Clases de alta intensidad 100% adaptables para principiantes y atletas de todos los niveles.
           </p>
           <div className="hero-buttons">
             <a
-              href="#competencia"
-              className="btn btn-primary btn-large"
-              style={{ display: 'inline-block', marginRight: '1rem', marginBottom: '0.5rem' }}
-            >
-              🏆 Inscribir Dupla
-            </a>
-            <a
-              href="https://wa.me/584167130325?text=Hola,%20me%20gustar%C3%ADa%20reservar%20!"
+              href="https://wa.me/584167130325?text=Hola!%20Quiero%20agendar%20mi%20clase%20de%20prueba%20gratis%20en%20Energy%20Box"
               target="_blank"
               rel="noopener noreferrer"
-              className="btn btn-secondary btn-large"
-              style={{ display: 'inline-block' }}
+              className="btn btn-primary btn-large btn-glow"
+              style={{ display: 'inline-block', marginRight: '1rem', marginBottom: '0.75rem' }}
             >
-              <span style={{ fontSize: '0.8em', marginRight: '6px' }}>💬</span> Contactar
+              🔥 Agenda Tu Clase Gratis
             </a>
+            <a
+              href="#horarios"
+              className="btn btn-secondary btn-large"
+              style={{ display: 'inline-block', marginBottom: '0.75rem' }}
+            >
+              Ver Horarios y Tarifas
+            </a>
+          </div>
+          <div className="hero-sublinks">
+            <a href="#competencia" className="hero-competencia-pill">
+              🏆 ¿Eres atleta activa del Box? <u>Inscribe tu dupla para la competencia aquí &rarr;</u>
+            </a>
+          </div>
+          <div className="hero-trust-bar">
+            <span>⭐ Clases 100% guiadas &bull; Sin experiencia previa requerida &bull; Comunidad Guarenas</span>
           </div>
         </div>
       </header>

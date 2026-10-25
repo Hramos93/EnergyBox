@@ -167,12 +167,26 @@ ul {
 .hero-content {
     position: relative;
     z-index: 2;
-    max-width: 600px;
+    max-width: 650px;
+}
+
+.hero-location-badge {
+    display: inline-block;
+    background-color: rgba(250, 204, 21, 0.15);
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+    padding: 6px 14px;
+    border-radius: 9999px;
+    font-size: 0.85rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    margin-bottom: 1.2rem;
 }
 
 .hero-content h1 {
-    font-size: 4rem;
-    line-height: 1.1;
+    font-size: 3.5rem;
+    line-height: 1.15;
     color: var(--white);
     margin-bottom: 1.5rem;
     font-weight: 900;
@@ -183,6 +197,49 @@ ul {
     font-size: 1.2rem;
     margin-bottom: 2rem;
     color: var(--text-main);
+}
+
+.btn-glow {
+    position: relative;
+    box-shadow: 0 0 20px rgba(250, 204, 21, 0.4);
+    animation: ctaPulse 2.5s infinite;
+}
+
+@keyframes ctaPulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(250, 204, 21, 0.6);
+    }
+    70% {
+        box-shadow: 0 0 0 14px rgba(250, 204, 21, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(250, 204, 21, 0);
+    }
+}
+
+.hero-sublinks {
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.hero-competencia-pill {
+    display: inline-block;
+    color: #FACC15;
+    font-size: 0.95rem;
+    font-weight: 700;
+    transition: opacity var(--transition-speed);
+}
+
+.hero-competencia-pill:hover {
+    color: #FFFFFF;
+}
+
+.hero-trust-bar {
+    font-size: 0.85rem;
+    color: #9CA3AF;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 1rem;
+    margin-top: 0.5rem;
 }
 
 /* Disciplines Section */
