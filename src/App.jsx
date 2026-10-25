@@ -24,7 +24,7 @@ function App() {
         <nav className="navbar">
           <div className="container nav-container">
             <a href="#" className="logo" onClick={handleNavClick}>
-              <img src="/assets/logo.png" alt="Energy Box C.A. Logo" />
+              <img src="/assets/logo.png" alt="Energy Box C.A. Logo" width="160" height="50" />
             </a>
 
             {/* Enlaces de Navegación (Desktop + Drawer Móvil) */}
@@ -383,6 +383,7 @@ function App() {
           </p>
           <div className="map-container">
             <iframe
+              title="Ubicación oficial de Energy Box C.A. en Las Clavellinas, Guarenas"
               width="100%"
               height="450"
               style={{ border: '1px solid var(--border-color)', borderRadius: '12px' }}
@@ -425,7 +426,7 @@ function App() {
       <footer id="contacto" className="footer">
         <div className="container footer-grid">
           <div className="footer-info">
-            <img src="/assets/logo.png" alt="Energy Box Logo Footer" className="footer-logo" />
+            <img src="/assets/logo.png" alt="Energy Box Logo Footer" className="footer-logo" width="160" height="60" />
             <p>Supera tus límites con la mejor comunidad de fitness.</p>
             <div className="company-details">
               <p><strong>Energy Box C.A. - Guarenas</strong></p>
